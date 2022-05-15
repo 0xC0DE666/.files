@@ -30,7 +30,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'} "Side directory nav menu
-Plug 'jeffkreeftmeijer/vim-numbertoggle' "Dynamic line numbering
 
 call plug#end()
 
