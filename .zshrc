@@ -12,4 +12,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# auto complete
+autoload -Uz compinit
+compinit
+_comp_options+=(globdots)
+
+# theme
+ZSH_THEME="robbyrussell"
+
+# alias
 alias cls='clear'
