@@ -19,7 +19,6 @@ set expandtab
 set nowrap
 set number
 
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'sheerun/vim-polyglot'
@@ -38,7 +37,7 @@ let g:airline_theme = "base16_spacemacs"
 let g:airline#extensions#ale#enabled = 1
 
 map <C-n> :NERDTreeToggle<CR>
-nnoremap <C-u> :UndotreeToggle<cr>
+nnoremap <C-z> :UndotreeToggle<cr>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
