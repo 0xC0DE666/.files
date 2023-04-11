@@ -24,9 +24,4 @@ autoload_dir=$config_dir/nvim/autoload
 [ ! -d  $autoload_dir ] && mkdir $autoload_dir || : ;
 curl -fsSL https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > $autoload_dir/plug.vim
 
-# spacegray color scheme
-colors_dir=$config_dir/nvim/colors
-[ ! -d $colors_dir ] && mkdir $colors_dir || : ;
-curl -fsSL https://raw.githubusercontent.com/ackyshake/Spacegray.vim/main/colors/spacegray.vim > $colors_dir/spacegray.vim
-
 echo "-- done --"

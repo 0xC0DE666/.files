@@ -9,5 +9,6 @@
     "typescriptreact",
     "json",
     "rust",
+    "svelte",
   ]
 }
