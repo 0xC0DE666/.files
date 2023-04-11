@@ -21,20 +21,31 @@ set number
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'} "Side directory nav menu
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'sheerun/vim-polyglot'
+
+" svelte
+Plug 'evanleck/vim-svelte'
 
 call plug#end()
 
 " airline
-let g:airline_theme = "base16_spacemacs"
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_theme = "simple"
 let g:airline#extensions#ale#enabled = 1
+let g:airline_symbols.linenr = ' l'
+let g:airline_symbols.maxlinenr = ' '
+let g:airline_symbols.colnr = 'c'
+ 
 
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-z> :UndotreeToggle<cr>
