@@ -16,7 +16,7 @@ config_dir=$HOME/.config;
 cp -R $wd/.config/* $config_dir;
 
 colors_dir=$config_dir/nvim/colors;
-mkdir colors_dir;
+mkdir $colors_dir;
 curl https://gist.githubusercontent.com/PatMan10/f743f664a5ac7815d38a2c8141a1aaf7/raw/e23f7383fec99ae6c13361e90cdeb0131fa33903/spacegray.vim > $colors_dir/spacegray.vim;
 
 echo "-- done --";
