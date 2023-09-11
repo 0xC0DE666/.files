@@ -42,6 +42,7 @@ require("_lazy.telescope");
 require("_lazy.treesitter");
 require("_lazy.harpoon");
 require("_lazy.undotree");
+require("_lazy.coc");
 -- minor
 require("_lazy.line");
 require("_lazy.gitsigns");
