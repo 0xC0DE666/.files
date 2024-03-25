@@ -6,10 +6,10 @@
   go_right = <Alt>l
   split_horiz = <Alt>n
   split_vert = <Alt>v
-  move_tab_right = <Shift>l
-  move_tab_left = <Shift>h
-  next_tab = <Primary>Right
-  prev_tab = <Primary>Left
+  move_tab_right = <Primary><Shift>l
+  move_tab_left = <Primary><Shift>h
+  next_tab = <Primary>l
+  prev_tab = <Primary>h
   switch_to_tab_1 = <Alt>1
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
@@ -20,6 +20,7 @@
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
   switch_to_tab_10 = <Alt>0
+  edit_tab_title = <Primary>r
   layout_launcher = KP_Begin
 [profiles]
   [[default]]
