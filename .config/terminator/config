@@ -20,10 +20,11 @@
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
   switch_to_tab_10 = <Alt>0
-  edit_tab_title = <Primary>r
+  edit_tab_title = <Primary><Alt>r
   layout_launcher = KP_Begin
 [profiles]
   [[default]]
+    cursor_shape = ibeam
 [layouts]
   [[default]]
     [[[window0]]]
