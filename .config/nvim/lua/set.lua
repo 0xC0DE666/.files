@@ -1,12 +1,20 @@
+-- theme
 vim.cmd("colorscheme spacegray");
-vim.g.mapleader = ' '
+vim.g.background = "dark";
+vim.g.termguicolors = true;
 
-vim.opt.encoding = 'utf-8';
-vim.opt.hidden = true;
-vim.opt.number = true;
-vim.opt.updatetime = 50;
+-- windows
+vim.g.splitright = true;
+vim.g.splitbelow = true;
+vim.g.splitkeep = "cursor";
 
--- tab settings
+-- backups
+vim.g.nobackup = true;
+vim.g.nowritebackup = true;
+vim.g.noswapfile = true;
+-- vim.opt.updatetime = 1000;
+
+-- indenting
 vim.opt.tabstop = 2;
 vim.opt.shiftwidth = 2;
 vim.opt.softtabstop = 2;
@@ -14,18 +22,10 @@ vim.opt.autoindent = true;
 vim.opt.expandtab = true;
 vim.opt.smarttab = true;
 
--- backup settings
-vim.g.nobackup = true;
-vim.g.nowritebackup = true;
-vim.g.noswapfile = true;
+-- misc
+vim.opt.encoding = "utf-8";
+vim.opt.hidden = true;
+vim.opt.number = true;
 
 -- other
-vim.o.background = 'dark';
-vim.o.splitright = true;
-vim.o.splitbelow = true;
--- vim.opt.termguicolors = true
-
-vim.wo.signcolumn = 'yes';
--- color shceme
--- vim.opt.termguicolors = true
--- vim.cmd.colorscheme('spacegray')
+vim.wo.signcolumn = "yes";
