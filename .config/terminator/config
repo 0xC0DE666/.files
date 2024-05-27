@@ -7,7 +7,7 @@
   go_down = <Alt>j
   go_left = <Alt>h
   go_right = <Alt>l
-  split_horiz = <Alt>n
+  split_horiz = <Alt>s
   split_vert = <Alt>v
   close_term = <Alt>q
   close_window = <Primary><Shift>q
