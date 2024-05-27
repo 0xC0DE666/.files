@@ -15,12 +15,12 @@ vim.opt.expandtab = true;
 vim.opt.smarttab = true;
 
 -- backup settings
-vim.o.nobackup = true;
-vim.o.nowritebackup = true;
-vim.o.noswapfile = true;
+vim.g.nobackup = true;
+vim.g.nowritebackup = true;
+vim.g.noswapfile = true;
 
 -- other
-vim.o.background = 'light';
+vim.o.background = 'dark';
 vim.o.splitright = true;
 vim.o.splitbelow = true;
 -- vim.opt.termguicolors = true
