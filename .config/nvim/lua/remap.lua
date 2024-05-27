@@ -8,10 +8,12 @@ vim.keymap.set("n", "<leader>ex", vim.cmd.Ex);
 vim.keymap.set("n", "<leader>bp", vim.cmd.bp);
 -- go to next Buffer.
 vim.keymap.set("n", "<leader>bn", vim.cmd.bN);
--- write buffer.
-vim.keymap.set("n", "<leader>w", vim.cmd.w);
 -- close current window.
 vim.keymap.set("n", "<leader>q", vim.cmd.quit);
+-- close all windows.
+vim.keymap.set("n", "<leader>qa", vim.cmd.qall);
+-- write buffer.
+vim.keymap.set("n", "<leader>w", vim.cmd.w);
 -- write buffer and close window.
 vim.keymap.set("n", "<leader>wq", vim.cmd.wq);
 -- write buffer and close all windows.
