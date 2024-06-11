@@ -2,24 +2,26 @@
 -- spacebar as leader.
 vim.g.mapleader = " ";
 
--- open explorer.
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex);
--- go to last Buffer.
-vim.keymap.set("n", "<leader>bp", vim.cmd.bp);
--- go to next Buffer.
-vim.keymap.set("n", "<leader>bn", vim.cmd.bN);
--- close current window.
-vim.keymap.set("n", "<leader>q", vim.cmd.quit);
--- close all windows.
-vim.keymap.set("n", "<leader>qa", vim.cmd.qall);
+-- ####################
+-- BUFFER
+-- ####################
+-- show buffers.
+vim.keymap.set("n", "<leader>bs", vim.cmd.buffers);
+-- go to last buffer.
+vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious);
+-- go to next buffer.
+vim.keymap.set("n", "<leader>bn", vim.cmd.bnext);
+-- delete buffer.
+vim.keymap.set("n", "<leader>bd", vim.cmd.bd);
 -- write buffer.
 vim.keymap.set("n", "<leader>w", vim.cmd.w);
--- write buffer and close window.
-vim.keymap.set("n", "<leader>wq", vim.cmd.wq);
--- write buffer and close all windows.
-vim.keymap.set("n", "<leader>wqa", vim.cmd.wqall);
--- go to terminal.
-vim.keymap.set("n", "<leader>t", vim.cmd.terminal);
+-- write all buffers.
+vim.keymap.set("n", "<leader><S-w>", vim.cmd.wall);
+
+
+-- ####################
+-- WINDOW
+-- ####################
 -- split window horizontal.
 vim.keymap.set("n", "<leader>s", function() vim.cmd.wincmd("s") end);
 -- split window vertical.
@@ -29,7 +31,31 @@ vim.keymap.set("n", "<leader>h", function() vim.cmd.wincmd("h") end);
 vim.keymap.set("n", "<leader>j", function() vim.cmd.wincmd("j") end);
 vim.keymap.set("n", "<leader>k", function() vim.cmd.wincmd("k") end);
 vim.keymap.set("n", "<leader>l", function() vim.cmd.wincmd("l") end);
--- close current split.
-vim.keymap.set("n", "<leader>c", vim.cmd.close);
--- go home in netrw.
-vim.keymap.set("n", "<leader>gh", function() vim.cmd("Vexplore ~/") end);
+-- close current window.
+vim.keymap.set("n", "<leader>q", vim.cmd.quit);
+-- close all windows.
+vim.keymap.set("n", "<leader><S-q>", vim.cmd.qall);
+
+
+-- ####################
+-- TAB
+-- ####################
+-- new tab.
+vim.keymap.set("n", "<leader>tn", vim.cmd.tabnew);
+-- close tab.
+vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose);
+
+-- ####################
+-- EXPLORE
+-- ####################
+-- open explorer.
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex);
+-- open ~ in explorer.
+vim.keymap.set("n", "<leader><S-h>", function() vim.cmd("Texplore ~/") end);
+
+
+-- ####################
+-- SPECIAL
+-- ####################
+-- terminal mode.
+vim.keymap.set("n", "<leader><S-t>", vim.cmd.terminal);
