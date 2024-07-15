@@ -1,0 +1,13 @@
+#!/bin/bash
+
+usage(){
+  echo "Usage:";
+  echo "  gC 'some commit message'";
+}
+
+if [ $# != 1 ]; then
+  usage;
+  exit 1;
+else
+  git add -A && git commit -m "$1";
+fi
