@@ -7,8 +7,9 @@ echo "copying ~ config files...";
 wd=`pwd`;
 cp $wd/.gitconfig $HOME/.gitconfig;
 cp $wd/.zshrc $HOME/.zshrc;
+cp $wd/.tmux.conf $HOME/.tmux.conf;
 
-echo "creating ~/.config/...";
+echo "copying ~/.config/ files...";
 config_dir=$HOME/.config;
 [ ! -d $config_dir ] && mkdir $config_dir || : ;
 cp -R $wd/.config/* $config_dir;
