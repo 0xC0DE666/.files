@@ -5,8 +5,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 echo "copying ~ config files...";
 wd=`pwd`;
-cp $wd/.gitconfig $HOME/.gitconfig;
 cp $wd/.zshrc $HOME/.zshrc;
+cp $wd/.gitconfig $HOME/.gitconfig;
 cp $wd/.tmux.conf $HOME/.tmux.conf;
 
 echo "copying ~/.config/ files...";
