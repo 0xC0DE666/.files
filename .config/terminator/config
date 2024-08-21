@@ -6,8 +6,8 @@
   go_down = <Primary>j
   go_left = <Primary>h
   go_right = <Primary>l
-  split_horiz = <Primary>s
-  split_vert = <Primary>v
+  split_horiz = <Primary><Alt>s
+  split_vert = <Primary><Alt>v
   close_term = <Primary>q
   close_window = <Primary><Shift>q
   move_tab_right = <Primary><Shift>l
