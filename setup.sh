@@ -4,15 +4,15 @@ echo "setting up ohmyzsh...";
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 
 echo "copying ~ config files...";
-wd=`pwd`;
-cp $wd/.zshrc $HOME/.zshrc;
-cp $wd/.gitconfig $HOME/.gitconfig;
-cp $wd/.tmux.conf $HOME/.tmux.conf;
+w_dir=`pwd`;
+cp $w_dir/.zshrc $HOME/.zshrc;
+cp $w_dir/.gitconfig $HOME/.gitconfig;
+cp $w_dir/.tmux.conf $HOME/.tmux.conf;
 
 echo "copying ~/.config/ files...";
 config_dir=$HOME/.config;
 [ ! -d $config_dir ] && mkdir $config_dir || : ;
-cp -R $wd/.config/* $config_dir;
+cp -R $w_dir/.config/* $config_dir;
 
 colors_dir=$config_dir/nvim/colors;
 mkdir $colors_dir;
