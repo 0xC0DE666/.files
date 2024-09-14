@@ -16,25 +16,23 @@ if not vim.loop.fs_stat(lazy.path) then
 end
 
 require("lazy").setup({
-  -- major
+  { "neoclide/coc.nvim", branch = "release" },
   {
     "nvim-telescope/telescope.nvim", branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   {
-    "ThePrimeagen/harpoon", 
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   { "mbbill/undotree" },
+  { "preservim/nerdtree" },
   { "tpope/vim-fugitive" },
-  { "neoclide/coc.nvim", branch = "release" },
-  -- minor
   { "nvim-lualine/lualine.nvim" },
   { "lewis6991/gitsigns.nvim" },
---svelte
-  -- {"sheerun/vim-polyglot"},
-  -- {"evanleck/vim-svelte"},
+--{"sheerun/vim-polyglot"},
 });
 
 -- major
