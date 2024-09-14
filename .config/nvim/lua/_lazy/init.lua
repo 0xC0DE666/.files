@@ -27,20 +27,20 @@ require("lazy").setup({
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
-  { "mbbill/undotree" },
   { "preservim/nerdtree" },
-  { "tpope/vim-fugitive" },
+  { "mbbill/undotree" },
   { "nvim-lualine/lualine.nvim" },
   { "lewis6991/gitsigns.nvim" },
+  { "tpope/vim-fugitive" },
 --{"sheerun/vim-polyglot"},
 });
 
 -- major
+require("_lazy.coc");
 require("_lazy.telescope");
 require("_lazy.treesitter");
 require("_lazy.harpoon");
+require("_lazy.nerdtree");
 require("_lazy.undotree");
-require("_lazy.coc");
--- minor
 require("_lazy.line");
 require("_lazy.gitsigns");
