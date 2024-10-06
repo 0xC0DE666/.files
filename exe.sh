@@ -39,7 +39,7 @@ setup() {
 
 cleanup() {
   echo "cleaning dot files..."
-  rm -rf ~/bin ~/.oh-my-zsh ~/.config/i4 ~/.config/nvim ~/.config/terminator ~/.config/coc;
+  rm -rf ~/bin ~/.oh-my-zsh ~/.local/share/nvim ~/.config/i4 ~/.config/nvim ~/.config/terminator ~/.config/coc;
   rm -f ~/.zshrc ~/.zsh_history ~/.gitconfig ~/.tmux.conf;
   echo "-- done --";
 }
