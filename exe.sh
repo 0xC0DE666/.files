@@ -3,14 +3,15 @@
 help() {
   printf "Usage\n"
   printf "    exe.sh --opt\n\n"
-  printf "    Run \"exe.sh --options\" to get the list of possible options.\n\n"
+  printf "Run \"exe.sh --options\" to get the list of possible options.\n\n"
 }
 
 options() {
-  echo "-h, --help     -  Print help."
-  echo "-o, --options  -  Print options."
-  echo "-s, --setup    -  Setup dot files."
-  echo "-c, --cleanup  -  Cleanup dot files."
+  printf "Options\n"
+  echo "    -h, --help     -  Print help."
+  echo "    -o, --options  -  Print options."
+  echo "    -s, --setup    -  Setup dot files."
+  echo "    -c, --cleanup  -  Cleanup dot files."
 }
 
 setup() {
@@ -64,7 +65,7 @@ else
     "--cleanup")
       cleanup;;
     *)
-       printf "Invalid option.\nRun \"bcs --options\" to get a list of options.\n";
+       printf "Invalid option.\nRun \"exe.sh --options\" to get a list of options.\n";
        exit 1;;
     esac
 fi
