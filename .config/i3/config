@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # detect HDMI-1
-exec_always --no-startup-id $HOME/.config/i3/sh/display.sh
+exec_always --no-startup-id sh $HOME/.config/i3/sh/display.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
