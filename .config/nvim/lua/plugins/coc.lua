@@ -18,10 +18,10 @@ keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 -- <C-g>u breaks current undo, please make your own choice
 keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
--- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
--- Use <c-backslash> to trigger completion
-keyset("i", "<c-backslash>", "coc#refresh()", {silent = true, expr = true})
+-- Use <C-j> to trigger snippets
+keyset("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)") -- ??
+-- Use <C-c> to trigger completion
+keyset("i", "<C-c>", "coc#refresh()", {silent = true, expr = true})
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
@@ -59,12 +59,12 @@ vim.api.nvim_create_autocmd("CursorHold", {
 
 
 -- Symbol renaming
-keyset("n", "<backslash>rn", "<Plug>(coc-rename)", {silent = true})
+keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 
 
 -- Formatting selected code
-keyset("x", "<backslash>f", "<Plug>(coc-format-selected)", {silent = true})
-keyset("n", "<backslash>f", "<Plug>(coc-format-selected)", {silent = true})
+keyset("x", "<leader>fs", "<Plug>(coc-format-selected)", {silent = true})
+keyset("n", "<leader>fs", "<Plug>(coc-format-selected)", {silent = true})
 
 
 -- Setup formatexpr specified filetype(s)
@@ -83,26 +83,22 @@ vim.api.nvim_create_autocmd("User", {
     desc = "Update signature help on jump placeholder"
 })
 
--- Apply codeAction to the selected region
--- Example: `<backslash>aap` for current paragraph
+-- Remap keys for apply code actions.
+-- Example: `<leader>aap` for current paragraph
 local opts = {silent = true, nowait = true}
-keyset("x", "<backslash>a", "<Plug>(coc-codeaction-selected)", opts)
-keyset("n", "<backslash>a", "<Plug>(coc-codeaction-selected)", opts)
-
--- Remap keys for apply code actions at the cursor position.
-keyset("n", "<backslash>ac", "<Plug>(coc-codeaction-cursor)", opts)
--- Remap keys for apply source code actions for current file.
-keyset("n", "<backslash>as", "<Plug>(coc-codeaction-source)", opts)
--- Apply the most preferred quickfix action on the current line.
-keyset("n", "<backslash>qf", "<Plug>(coc-fix-current)", opts)
+keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
+keyset("x", "<leader>as", "<Plug>(coc-codeaction-selected)", opts)
+keyset("n", "<leader>as", "<Plug>(coc-codeaction-selected)", opts)
+keyset("n", "<leader>af", "<Plug>(coc-codeaction-source)", opts)
+keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
 -- Remap keys for apply refactor code actions.
-keyset("n", "<backslash>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
-keyset("x", "<backslash>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-keyset("n", "<backslash>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset("n", "<leader>rc", "<Plug>(coc-codeaction-refactor)", { silent = true })
+keyset("x", "<leader>rs", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset("n", "<leader>rs", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 -- Run the Code Lens actions on the current line
-keyset("n", "<backslash>cl", "<Plug>(coc-codelens-action)", opts)
+keyset("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
 
 
 -- Map function and class text objects
@@ -144,11 +140,6 @@ vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", {na
 
 -- Add `:OR` command for organize imports of the current buffer
 vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
-
--- Add (Neo)Vim's native statusline support
--- NOTE: Please see `:h coc-status` for integrations with external plugins that
--- provide custom statusline: lightline.vim, vim-airline
-vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
 
 -- Mappings for CoCList
 -- code actions and coc stuff
