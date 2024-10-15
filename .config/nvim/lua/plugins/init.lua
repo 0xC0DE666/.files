@@ -35,12 +35,11 @@ require("lazy").setup({
 --{"sheerun/vim-polyglot"},
 });
 
--- major
-require("_lazy.coc");
-require("_lazy.telescope");
-require("_lazy.treesitter");
-require("_lazy.harpoon");
-require("_lazy.nerdtree");
-require("_lazy.undotree");
-require("_lazy.line");
-require("_lazy.gitsigns");
+require("plugins.coc");
+require("plugins.telescope");
+require("plugins.treesitter");
+require("plugins.harpoon");
+require("plugins.nerdtree");
+require("plugins.undotree");
+require("plugins.line");
+require("plugins.gitsigns");
