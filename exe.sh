@@ -31,7 +31,7 @@ setup() {
   curl --silent https://gist.githubusercontent.com/PatMan10/f743f664a5ac7815d38a2c8141a1aaf7/raw/e23f7383fec99ae6c13361e90cdeb0131fa33903/spacegray.vim > $colors_dir/spacegray.vim;
 
   echo "setting up ohmyzsh...";
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &> zsh.log & disown;
   cp $w_dir/.zshrc $HOME/.zshrc;
  
   echo "-- done --";
