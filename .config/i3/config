@@ -36,6 +36,8 @@ exec --no-startup-id nm-applet
 
 # detect HDMI-1
 exec_always --no-startup-id sh $HOME/.config/i3/sh/display.sh
+# run cliboard daemon
+exec_always --no-startup-id sh $HOME/bin/clipmon.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
