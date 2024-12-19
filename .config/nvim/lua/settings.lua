@@ -51,11 +51,6 @@ vim.opt.shiftwidth = 2;
 vim.opt.softtabstop = 2;
 
 -- ####################
--- MISC
--- ####################
-vim.opt.number = true;
-
--- ####################
 -- OTHER
 -- ####################
 vim.wo.signcolumn = "yes";
